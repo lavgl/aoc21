@@ -44,7 +44,7 @@ test "parseCommand" {
 pub fn main() !void {
     const dir = fs.cwd();
 
-    const f = try dir.openFile("2_input.txt", .{});
+    const f = try dir.openFile("../resources/2_input.txt", .{});
     defer f.close();
 
     var buf: [16]u8 = undefined;

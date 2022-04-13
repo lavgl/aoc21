@@ -10,7 +10,7 @@ var allocator_memory: [2 * 2000 * @sizeOf(u32)]u8 = undefined;
 pub fn main() !void {
     const dir = fs.cwd();
 
-    const f = try dir.openFile("1_input.txt", .{});
+    const f = try dir.openFile("../resources/1_input.txt", .{});
     defer f.close();
     
     var allocator = std.heap.FixedBufferAllocator.init(allocator_memory[0..]).allocator();
